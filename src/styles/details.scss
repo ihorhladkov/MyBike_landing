@@ -1,0 +1,140 @@
+.details {
+  padding-top: 92px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: -1.5px;
+    text-transform: capitalize;
+    color: $text-color;
+    margin-bottom: 48px;
+
+    @include middleScreen {
+      font-size: 48px;
+      margin-bottom: 64px;
+    }
+
+    @include middleScreen {
+      font-size: 64px;
+      margin-bottom: 48px;
+    }
+  }
+
+  &__information {
+
+    @include middleScreen {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+
+  &__discription--title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    color: $text-color;
+    margin-bottom: 8px;
+
+    @include middleScreen {
+      grid-column: 1/8;
+    }
+  }
+
+  &__discription {
+    font-size: 16px;
+    line-height: 140%;
+    color: $text-color;
+
+    @include middleScreen {
+      grid-column: 1/9;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-bottom: 16px;
+
+    @include middleScreen {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    min-width: 130px;
+    object-fit: cover;
+    height: 100%;
+    object-position: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.4);
+    }
+
+    @include middleScreen {
+      &--first {
+        grid-column: 1/5;
+        max-height: 330px;
+      }
+    }
+
+    @include middleScreen {
+      &--second {
+        grid-column: 5/7;
+        max-height: 330px;
+      }
+    }
+
+    @include middleScreen {
+      &--third {
+        grid-column: 1/3;
+        max-height: 330px;
+      }
+    }
+
+    @include middleScreen {
+      &--fourth {
+        grid-column: 3/7;
+        max-height: 330px;
+      }
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+    display: block;
+    text-decoration: none;
+    background-color: $text-color;
+    border-radius: 40px;
+    width: 100%;
+    max-width: 392px;
+    color: #1d1d1d;
+    text-align: center;
+    padding: 16.5px 0;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.4);
+    }
+
+    &:active {
+      box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.64);
+    }
+  }
+}

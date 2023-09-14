@@ -1,0 +1,96 @@
+.compare {
+  padding-top: 92px;
+  margin: 0 auto;
+
+  @include middleScreen {
+    padding-top: 132px;
+  }
+
+  @include largeScreen {
+    padding-top: 164px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: -1.5px;
+    text-transform: capitalize;
+    color: $text-color;
+    margin-bottom: 48px;
+
+    @include middleScreen {
+      font-size: 48px;
+    }
+
+    @include largeScreen {
+      font-size: 64px;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  @include largeScreen {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 280px;
+
+    @include middleScreen {
+      & {
+        max-width: 392px;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    min-width: 260px;
+    margin-bottom: 32px;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.02);
+      z-index: 1;
+    }
+
+    @include middleScreen {
+      min-width: 392px;
+    }
+
+    @include largeScreen {
+      min-width: 324px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    color: $text-color;
+    margin-bottom: 8px;
+  }
+
+  &__discription {
+    font-size: 16px;
+    line-height: 140%;
+    color: $text-color;
+    margin-bottom: 16px;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    color: $text-color;
+  }
+}

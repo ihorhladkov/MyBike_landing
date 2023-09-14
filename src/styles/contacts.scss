@@ -1,0 +1,166 @@
+.contacts {
+  padding-top: 88px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: -1.5px;
+    margin-bottom: 48px;
+    color: $text-color;
+
+    @include middleScreen {
+      font-size: 48px;
+    }
+
+    @include largeScreen {
+      font-weight: 600;
+      font-size: 48px;
+    }
+  }
+
+  &__name,
+  &__email {
+    outline: none;
+    border: 0;
+    font-family: "Poppins", sans-serif;
+    display: block;
+    width: 100%;
+    padding: 14px 0 14px 16px;
+    background: #f8f8fa;
+    border-radius: 40px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 16px;
+    color: #7e7e83;
+
+    @include middleScreen {
+      max-width: 288px;
+    }
+
+    @include largeScreen {
+      max-width: 411px;
+    }
+  }
+
+  &__message {
+    font-family: "Poppins", sans-serif;
+    resize: none;
+    outline: none;
+    width: 100%;
+    height: 148px;
+    background: #f8f8fa;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    padding: 16px 14px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #7e7e83;
+
+    @include middleScreen {
+      max-width: 288px;
+    }
+
+    @include largeScreen {
+      max-width: 411px;
+    }
+  }
+
+  &__button {
+    display: block;
+    padding: 16.5px 0;
+    width: 100%;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    text-decoration: none;
+    text-align: center;
+    color: $nav-color;
+    background: $text-color;
+    border-radius: 40px;
+    margin-bottom: 48px;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.4);
+    }
+
+    &:active {
+      box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.64);
+    }
+
+    @include middleScreen {
+      max-width: 288px;
+    }
+
+    @include largeScreen {
+      max-width: 411px;
+    }
+  }
+
+  &__phone--title,
+  &__email--title,
+  &__address--title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: $text-color;
+    margin-bottom: 8px;
+  }
+
+  &__phone--link,
+  &__email--link {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: $text-color;
+    margin-bottom: 24px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__address {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: $text-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__form {
+    @include middleScreen {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 24px;
+    }
+
+    @include largeScreen {
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: 24px;
+    }
+  }
+
+  &__information {
+    grid-column: 1/4;
+
+    @include largeScreen {
+      grid-column: 1/6;
+    }
+  }
+
+  &__information:last-child {
+    grid-column: 4/7;
+
+    @include largeScreen {
+      grid-column: 8/12;
+    }
+  }
+}

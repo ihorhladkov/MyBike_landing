@@ -1,0 +1,24 @@
+.footer {
+  background-image: url(../images/footer.jpg);
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  @include middleScreen {
+    height: 480px;
+  }
+
+  @include middleScreen {
+    height: 555px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

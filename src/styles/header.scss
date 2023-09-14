@@ -1,0 +1,88 @@
+.header {
+  position: relative;
+  background-image: url(../images/header-background.jpg);
+  background-repeat: no-repeat;
+  background-position: 90%;
+  background-size: cover;
+  height: 100vh;
+
+  @include middleScreen {
+    & {
+      background-position: center;
+    }
+  }
+
+  &__content {
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 29px 0 88px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include middleScreen {
+      & {
+        padding: 34px 0 130px;
+      }
+    }
+
+    @include middleScreen {
+      padding: 36px 0 203px;
+    }
+  }
+
+  &__title {
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -1.5px;
+    color: $text-color;
+    text-align: center;
+
+    @include middleScreen {
+      & {
+        font-size: 64px;
+      }
+    }
+
+    @include middleScreen {
+      & {
+        font-size: 80px;
+      }
+    }
+  }
+
+  &__logo {
+    width: 130px;
+    height: 38px;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    @include middleScreen {
+      & {
+        width: 187px;
+        height: 56px;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @include middleScreen {
+      gap: 60px;
+    }
+  }
+}
